@@ -1,6 +1,6 @@
 import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate";
-import Card from "./Card"; // The re-use-able wrapper.
+import Card from "../UI/Card"; // The re-use-able wrapper.
 
 function ExpenseItem(props) {
   return (

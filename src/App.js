@@ -1,6 +1,6 @@
 import React from "react";
 // Tree Structure: Expenses.js > ExpenseItem.js > ExpenseDate.js:
-import Expenses from "./components/Expenses";
+import Expenses from "./components/Expenses/Expenses";
 
 function App() {
   const expenses = [
