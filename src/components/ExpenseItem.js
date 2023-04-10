@@ -1,9 +1,10 @@
 import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate";
+import Card from "./Card"; // The re-use-able wrapper.
 
 function ExpenseItem(props) {
   return (
-    <div className="expense-item">
+    <Card className="expense-item">
       <ExpenseDate
         title={props.title}
         amount={props.amount}
@@ -13,7 +14,7 @@ function ExpenseItem(props) {
         <h2>{props.title}</h2>
         <p className="expense-item__price">${props.amount}</p>
       </div>
-    </div>
+    </Card>
   );
 }
 
