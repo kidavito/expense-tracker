@@ -1,9 +1,9 @@
 import React from "react";
 
-// [INPUT] Tree Structure: NewExpense.js > ExpenseForm.js:
+// [INPUT FORM] Tree Structure: NewExpense.js > ExpenseForm.js:
 import NewExpense from "./components/NewExpense/NewExpense";
 
-// [OUTPUT] Tree Structure: Expenses.js > ExpenseItem.js > ExpenseDate.js:
+// [OUTPUT DISPLAY] Tree Structure: Expenses.js > ExpenseItem.js > ExpenseDate.js:
 import Expenses from "./components/Expenses/Expenses";
 
 function App() {
