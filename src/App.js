@@ -43,6 +43,7 @@ function App() {
   //   "div",
   //   {},
   //   React.createElement("h2", {}, "Expense Tracker!"),
+  //   React.createElement(NewExpense, { onAddExpense: addExpenseHandler }),
   //   React.createElement(Expenses, { items: expenses })
   // );
 
