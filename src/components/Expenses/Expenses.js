@@ -20,21 +20,14 @@ function Expenses(props) {
           selected={filteredYear} // props.
           onChangeFilter={filterChangeHandler} // props.
         />
-        <ExpenseItem
-          title={props.items[0].title} // props.
-          amount={props.items[0].amount} // props.
-          date={props.items[0].date} // props.
-        />
-        <ExpenseItem
-          title={props.items[1].title} // props.
-          amount={props.items[1].amount} // props.
-          date={props.items[1].date} // props.
-        />
-        <ExpenseItem
-          title={props.items[2].title} // props.
-          amount={props.items[2].amount} // props.
-          date={props.items[2].date} // props.
-        />
+        {props.items.map((expense) => (
+          // Retrieve the data from "props.items" and pass it into "ExpenseItem" component for each array element/object:
+          <ExpenseItem
+            title={expense.title} // Props.
+            amount={expense.amount} // Props.
+            date={expense.date} // Props.
+          />
+        ))}
       </Card>
     </div>
   );
