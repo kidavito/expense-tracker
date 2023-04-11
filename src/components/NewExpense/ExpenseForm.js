@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ExpenseForm.css";
 
-function ExpenseForm() {
+function ExpenseForm(props) {
   // Individual "useState":
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
@@ -75,7 +75,9 @@ function ExpenseForm() {
       date: new Date(enteredDate),
     };
 
-    console.log(expenseData);
+    // Calling and execute "onSaveExpenseData()" from "NewExpense.js":
+    // Tree Structure: App.js > NewExpense.js > ExpenseForm.js.
+    props.onSaveExpenseData(expenseData); // Make the function using "expenseData".
 
     // Reset/empty the form fields after submitting:
     setEnteredTitle("");

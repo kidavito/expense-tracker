@@ -30,6 +30,14 @@ function App() {
     // Note: The month and day are using array format from "Date()" which starts counting from 0, so "2023, 3, 11" means "2023, April 10".
   ];
 
+  // Function to pass through the "onAddExpense":
+  // This function will be executed on "NewExpense.js" using props:
+  // Tree Structure: App.js > NewExpense.js > ExpenseForm.js.
+  const addExpenseHandler = (expense) => {
+    console.log("In App.js");
+    console.log(expense);
+  };
+
   // Render HTML using React object (without JSX):
   // return React.createElement(
   //   "div",
@@ -41,7 +49,7 @@ function App() {
   // Render HTML using JSX:
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
   );
