@@ -13,6 +13,14 @@ function Expenses(props) {
     setFilteredYear(selectedYear);
   };
 
+  // Filtering by the year:
+  const filteredExpenses = props.items.filter((expense) => {
+    // Retrive all data from "props.items" (Originally App.js > DUMMY_EXPENSES):
+    // Get "date" from "props.items" in "year" format using "getFullYear" method and convert it to "string":
+    // Then compared the converted string to the value of "filteredYear":
+    return expense.date.getFullYear().toString() === filteredYear; // Return boolean value (true/false).
+  });
+
   return (
     <div>
       <Card className="expenses">
@@ -20,9 +28,11 @@ function Expenses(props) {
           selected={filteredYear} // props.
           onChangeFilter={filterChangeHandler} // props.
         />
-        {props.items.map((expense) => (
-          // Retrieve the data from "props.items" and pass it into "ExpenseItem" component for each array element/object:
+        {filteredExpenses.map((expense) => (
+          // If the "filteredExpenses" return boolean "true", then render the "ExpenseItem" component(s):
+          // The retrieve the data from "props.items" which happened inside the "filteredExpenses" function and pass it into "ExpenseItem" component for each array element/object:
           <ExpenseItem
+            key={expense.id} // Props, it's recommended to provide and use unique "id" in the array instead of using "index".
             title={expense.title} // Props.
             amount={expense.amount} // Props.
             date={expense.date} // Props.
