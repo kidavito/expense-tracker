@@ -1,5 +1,9 @@
 import React from "react";
-// Tree Structure: Expenses.js > ExpenseItem.js > ExpenseDate.js:
+
+// [INPUT] Tree Structure: NewExpense.js > ExpenseForm.js:
+import NewExpense from "./components/NewExpense/NewExpense";
+
+// [OUTPUT] Tree Structure: Expenses.js > ExpenseItem.js > ExpenseDate.js:
 import Expenses from "./components/Expenses/Expenses";
 
 function App() {
@@ -37,7 +41,7 @@ function App() {
   // Render HTML using JSX:
   return (
     <div>
-      <h1>Expense Tracker!</h1>
+      <NewExpense />
       <Expenses items={expenses} />
     </div>
   );
