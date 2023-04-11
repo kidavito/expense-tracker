@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import ExpenseItem from "./ExpenseItem";
-import Card from "../UI/Card"; // The re-use-able wrapper.
-import ExpensesFilter from "./ExpensesFilter";
+import ExpenseItem from "./ExpenseItem"; // Child component.
+import Card from "../UI/Card"; // The re-use-able wrapper, also a child component.
+import ExpensesFilter from "./ExpensesFilter"; // Child component.
 import "./Expenses.css";
 
 function Expenses(props) {

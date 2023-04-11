@@ -1,10 +1,10 @@
 import React from "react";
 
 // [INPUT FORM] Tree Structure: NewExpense.js > ExpenseForm.js:
-import NewExpense from "./components/NewExpense/NewExpense";
+import NewExpense from "./components/NewExpense/NewExpense"; // Child component.
 
 // [OUTPUT DISPLAY] Tree Structure: Expenses.js > ExpenseItem.js > ExpenseDate.js:
-import Expenses from "./components/Expenses/Expenses";
+import Expenses from "./components/Expenses/Expenses"; // Child component.
 
 function App() {
   const expenses = [

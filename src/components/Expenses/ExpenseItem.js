@@ -1,5 +1,5 @@
 import React from "react";
-import ExpenseDate from "./ExpenseDate";
+import ExpenseDate from "./ExpenseDate"; // Child component.
 import Card from "../UI/Card"; // The re-use-able wrapper.
 import "./ExpenseItem.css";
 

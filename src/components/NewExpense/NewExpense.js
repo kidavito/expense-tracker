@@ -1,6 +1,6 @@
 import React from "react";
 import "./NewExpense.css";
-import ExpenseForm from "./ExpenseForm";
+import ExpenseForm from "./ExpenseForm"; // Child component.
 
 function NewExpense(props) {
   // Function to pass through the "onSaveExpenseData":
