@@ -50,8 +50,12 @@ function App() {
   // Render HTML using JSX:
   return (
     <div>
-      <NewExpense onAddExpense={addExpenseHandler} />
-      <Expenses items={expenses} />
+      <NewExpense
+        onAddExpense={addExpenseHandler} // props.
+      />
+      <Expenses
+        items={expenses} // props.
+      />
     </div>
   );
 }
