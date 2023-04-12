@@ -3,7 +3,7 @@ import React, { useState } from "react";
 // [INPUT FORM] Tree Structure: NewExpense.js > ExpenseForm.js:
 import NewExpense from "./components/NewExpense/NewExpense"; // Child component.
 
-// [OUTPUT DISPLAY] Tree Structure: Expenses.js > ExpensesList > ExpenseItem.js > ExpenseDate.js:
+// [OUTPUT DISPLAY] Tree Structure: Expenses.js > ExpensesList.js > ExpenseItem.js > ExpenseDate.js:
 import Expenses from "./components/Expenses/Expenses"; // Child component.
 
 // Initial data:
