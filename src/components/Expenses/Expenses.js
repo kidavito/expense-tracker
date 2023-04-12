@@ -21,6 +21,23 @@ function Expenses(props) {
     return expense.date.getFullYear().toString() === filteredYear; // Return boolean value (true/false).
   });
 
+  // Default value of "expensesContent", this is for "if" the "filteredExpenses" value is empty:
+  let expensesContent = <p>No expenses found.</p>;
+
+  // If "filteredExpenses" value is not empty (> 0) then, change the "expensesContent":
+  if (filteredExpenses.length > 0) {
+    expensesContent = filteredExpenses.map((expense) => (
+      // If the "filteredExpenses" return boolean "true", then render the "ExpenseItem" component(s):
+      // The retrieve the data from "props.items" which happened inside the "filteredExpenses" function and pass it into "ExpenseItem" component for each array element/object:
+      <ExpenseItem
+        key={expense.id} // Props, it's recommended to provide and use unique "id" in the array instead of using "index".
+        title={expense.title} // Props.
+        amount={expense.amount} // Props.
+        date={expense.date} // Props.
+      />
+    ));
+  }
+
   return (
     <div>
       <Card className="expenses">
@@ -28,21 +45,7 @@ function Expenses(props) {
           selected={filteredYear} // props.
           onChangeFilter={filterChangeHandler} // props.
         />
-        {filteredExpenses.length === 0 ? ( // Checking if there's no data in the "filteredExpenses".
-          <p>No expenses found.</p>
-        ) : (
-          // Otherwise, render this:
-          filteredExpenses.map((expense) => (
-            // If the "filteredExpenses" return boolean "true", then render the "ExpenseItem" component(s):
-            // The retrieve the data from "props.items" which happened inside the "filteredExpenses" function and pass it into "ExpenseItem" component for each array element/object:
-            <ExpenseItem
-              key={expense.id} // Props, it's recommended to provide and use unique "id" in the array instead of using "index".
-              title={expense.title} // Props.
-              amount={expense.amount} // Props.
-              date={expense.date} // Props.
-            />
-          ))
-        )}
+        {expensesContent}
       </Card>
     </div>
   );
