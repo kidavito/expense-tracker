@@ -17,6 +17,8 @@ function NewExpense(props) {
     };
     // Calling and execute "onAddExpense()" from "App.js":
     props.onAddExpense(expenseData); // Make the function using "expenseData".
+    // Set "isEditing" to "false" (disable the editing mode) when form submitted:
+    setIsEditing(false); // After the "Add Expense" form submitted, editing more will be disabled automatically.
   };
 
   // For "Add New Expense" button, enables the editing mode:
