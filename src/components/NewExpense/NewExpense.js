@@ -19,9 +19,14 @@ function NewExpense(props) {
     props.onAddExpense(expenseData); // Make the function using "expenseData".
   };
 
-  // For "Add New Expense" button:
+  // For "Add New Expense" button, enables the editing mode:
   const startEditingHandler = () => {
     setIsEditing(true);
+  };
+
+  // For "Cancel" button in the "ExpenseForm.js", disable the editing mode:
+  const stopEditingHandler = () => {
+    setIsEditing(false);
   };
 
   return (
@@ -32,6 +37,7 @@ function NewExpense(props) {
       {isEditing && ( // If "isEditing" is "true".
         <ExpenseForm
           onSaveExpenseData={saveExpenseDataHandler} // props.
+          onCancel={stopEditingHandler} // props (For "Cancel" button).
         />
       )}
     </div>
