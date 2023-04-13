@@ -3,7 +3,7 @@ import "./NewExpense.css";
 import ExpenseForm from "./ExpenseForm"; // Child component.
 
 function NewExpense(props) {
-  // State for anable/disable "Add Expense" form:
+  // State for enable/disable "Add Expense" form:
   const [isEditing, setIsEditing] = useState(false); // Initially "false".
 
   // Function to pass through the "onSaveExpenseData":
