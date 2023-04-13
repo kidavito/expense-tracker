@@ -71,7 +71,7 @@ function ExpenseForm(props) {
     // Set "expenseData" object properties:
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount, // Forcing the input value to number format instead of string by default.
       date: new Date(enteredDate),
     };
 
