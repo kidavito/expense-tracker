@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Card from "../UI/Card"; // The re-use-able wrapper, also a child component.
 import ExpensesList from "./ExpensesList"; // Child component.
 import ExpensesFilter from "./ExpensesFilter"; // Child component.
+import ExpensesChart from "./ExpensesChart";
 import "./Expenses.css";
 
 function Expenses(props) {
@@ -27,6 +28,9 @@ function Expenses(props) {
         <ExpensesFilter
           selected={filteredYear} // props.
           onChangeFilter={filterChangeHandler} // props.
+        />
+        <ExpensesChart
+          expenses={filteredExpenses} // props.
         />
         <ExpensesList items={filteredExpenses} />
       </Card>
